@@ -1,7 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"><title>Contact Form</title><link rel="stylesheet" href="style.css" /></head>
-<body><main><h2>Contact Form Demo</h2>
-<form id="contact-form"><input type="text" placeholder="Name" required />
-<input type="email" placeholder="Email" required />
-<textarea placeholder="Message"></textarea><button type="submit">Submit</button></form></main></body></html>
+<form id="contact-form" onsubmit="handleFormSubmit(event)">
+  <input type="text" placeholder="Name" required />
+  <input type="email" placeholder="Email" required />
+  <textarea placeholder="Message"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  function handleFormSubmit(e) {
+    e.preventDefault(); // Stop default form submission
+    // Optionally: collect values or send to backend via fetch()
+
+    // Simulate delay or success logic, then redirect
+    window.location.href = "thank-you.html";
+  }
+</script>
